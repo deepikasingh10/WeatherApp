@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 12px;
+    font-size: 100%;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(43, 50, 178) 0%, rgb(20, 136, 204) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .location-and-date {
+    width: 100%;
+  }
+  
+  .location-and-date_location {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: 600;
+  }
+  
+  .temperature {
+    display: flex;
+    margin-top: 0.25em;
+    width: 100%;
+  }
+  
+  .temperature_icon-container {
+    flex-grow: 1.25;
+    text-align: center;
+  }
+  
+  .temperature_content-container {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .temperature_icon {
+    width: 10.5em;
+  }
+  
+  .temperature_value {
+    font-size: 5.25em;
+    font-weight: 300;
+  }
+  
+  .temperature_label {
+    margin-top: -0.2em;
+    margin-left: -0.6em;
+    text-align: center;
+    font-size: 1.125em;
+  }
+  
+  .time {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1em;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .time_value {
+    margin-top: 0.8em;
+    font-size: 1.44em;
+  }
+  
+  .time_label {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .weather {
+    display: none;
+    width: 100%;
+  }
+  
+  .weather_container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .weather_heading {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  
+  .weather_item {
+    padding: 0.8em 0;
+    width: 13%;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.15);
+    font-size: 1.125em;
+    text-align: center;
+  }
+  
+  .weather_hour {
+    margin-bottom: 0.5em;
+  }
+  
+  .next-5-days {
+    width: 100%;
+    margin-top: 1em;
+  }
+  
+  .next-5-days_heading {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  
+  .next-5-days_container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .next-5-days_row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0.3em;
+    padding: 0.8em 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 1.19em;
+    text-align: center;
+  }
+  
+  .next-5-days_label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.83em;
+  }
+  
+  .next-5-days_date {
+    width: 33.33333%;
+    font-size: 0.95em;
+    margin-bottom: 0.6rem;
+  }
+  
+  .next-5-days_high {
+    width: 33.33333%;
+    font-size: 0.95em;
+    margin-bottom: 0.6rem;
+  }
+  
+  .next-5-days_low {
+    width: 33.33333%;
+    font-size: 0.95em;
+    margin-bottom: 0.6rem;
+  }
+  
+  .next-5-days_icon {
+    width: 33.33333%;
+    font-size: 0.95em;
+  }
+  
+  .next-5-days_rain {
+    width: 33.33333%;
+    font-size: 0.95em;
+  }
+  
+  .next-5-days_wind {
+    width: 33.33333%;
+    font-size: 0.95em;
+  }
+  
+  @media screen and (min-width: 920px) {
+    container {
+      width: 880px;
+      margin: 8px auto;
+      font-size: 1.1em;
+    }
+  }
+  @media screen and (min-width: 880px) {
+    .weather_item {
+      width: 6.05em;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .weather_heading {
+      font-size: 1.125em;
+    }
+    .next-5-days_heading {
+      font-size: 1.125em;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    body {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+    .time {
+      width: 50%;
+      margin-bottom: 1em;
+      padding-bottom: 0;
+      border-top: none;
+      border-bottom: none;
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .temperature {
+      width: 50%;
+    }
+    .weather {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 450px) {
+    .next-5-days_date {
+      width: 16.666666%;
+      margin-bottom: initial;
+      order: -2;
+    }
+    .next-5-days_high {
+      width: 16.666666%;
+      margin-bottom: initial;
+    }
+    .next-5-days_low {
+      width: 16.666666%;
+      margin-bottom: initial;
+    }
+    .next-5-days_icon {
+      width: 16.666666%;
+      margin-bottom: initial;
+      order: -1;
+    }
+    .next-5-days_wind {
+      width: 16.666666%;
+      margin-bottom: initial;
+    }
+    .next-5-days_rain {
+      width: 16.666666%;
+      margin-bottom: initial;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 17px;
+      margin-right: 17px;
+    }
+    .weather {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 980px) {
+    body {
+      margin-left: 10rem;
+      margin-right: 10rem;
+    }
+  }
